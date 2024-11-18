@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movie Explorer</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">Movie Explorer</div>
+      <div class="burger-menu">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+    
+      <ul class="burger-dropdown"> 
+        <li>
+            <img src="https://img.freepik.com/free-vector/hamburger_53876-25481.jpg?t=st=1731950096~exp=1731953696~hmac=f8a67818311a52ceef4fecaa4bd6bbe3657c34494cc068fe8fe445bdbea834e0&w=826" alt="Classic Burger">
+            <a href="#">Classic Burger</a></li>
+        <li>
+            <img src="https://img.freepik.com/free-vector/delicious-burger-with-fresh-ingredients_1308-176257.jpg?t=st=1731950119~exp=1731953719~hmac=0f6f685ceb6f85e662d39c835ff2b7a70c9b8fde0728b35cc45549a663d13683&w=826" alt="Cheeseburger">
+            <a href="#">Cheeseburger</a></li>
+        <li>
+            <img src="https://img.freepik.com/free-vector/isolated-delicious-hamburger-cartoon_1308-134213.jpg?t=st=1731950143~exp=1731953743~hmac=126757af5a4a3913079c839f402c90d82d5ce5b2ac4f8f5bfae5411aeb45326f&w=900" alt="Bacon Burger">
+            <a href="#">Bacon Burger</a></li>
+      </ul>
+    
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#movies">Movies</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <h1>Discover Your Favorite Movies</h1>
+    <div id="slider" class="slider-container">
+        <div class="slider">
+          <img src="https://images5.alphacoders.com/636/thumb-1920-636560.jpg?text=Slide+1" alt="Slide 1">
+          <img src="https://i.pinimg.com/originals/b6/a4/66/b6a4663baf2f3f13e11ec80178e2d790.webp?text=Slide+2" alt="Slide 2">
+          <img src="https://wallpapercat.com/w/full/c/a/f/21179-1920x1200-desktop-hd-the-office-tv-series-wallpaper-image.jpg?text=Slide+3" alt="Slide 3">
+          <img src="https://wallpapers.com/images/hd/arcane-league-of-legends-broken-reflection-6f1fasdzkfzs60ro.jpg?text=Slide+4" alt="Slide 4">
+        </div>
+        <button class="prev">&#10094;</button>
+        <button class="next">&#10095;</button>
+      </div>
+  </section>
+
+  <!-- Filter Section -->
+  <section id="movies" class="movies">
+    <h2>Explore Movies</h2>
+    <div class="filters">
+      <select id="genreFilter">
+        <option value="all">All Genres</option>
+        <option value="action">Action</option>
+        <option value="comedy">Comedy</option>
+        <option value="drama">Drama</option>
+      </select>
+      <input type="text" id="searchInput" placeholder="Search movies...">
+    </div>
+    <div id="movieList" class="movie-list"></div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section id="faq" class="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div id="accordion"></div>
+  </section>
+
+  <!-- Contact Form -->
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+      <label for="name">Name</label>
+      <input type="text" id="name" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" required>
+      <label for="password">Password</label>
+      <div class="password-wrapper">
+        <input type="password" id="password" required>
+        <button type="button" id="togglePassword">Show</button>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <!-- Cookie Notification -->
+  <div id="cookieNotification" class="cookie-notification">
+    <p>We use cookies to enhance your experience. <button id="acceptCookies">Accept</button></p>
+  </div>
+
+  <!-- Scroll to Top -->
+  <button id="scrollTop" class="scroll-top">↑</button>
+
+
+  <script src="burger.js"></script>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
